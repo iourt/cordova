@@ -18,5 +18,11 @@
             "type": "registry",
             "id": "com.telerik.plugins.wkwebview"
         }
+    },
+    "org.apache.cordova.camera": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.camera"
+        }
     }
 }

@@ -17,6 +17,10 @@
     <feature name="NativePageTransitions">
         <param name="ios-package" value="NativePageTransitions" />
     </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <preference name="CameraUsesGeolocation" value="false" />
     <name>Club</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
