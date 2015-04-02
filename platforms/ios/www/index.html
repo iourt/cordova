@@ -74,10 +74,13 @@
         .mod li{
             line-height:30px; color:#000; text-indent:10px;
         }
-        .loading{ 
-            width:50px; height:50px; background:red; position:absolute;
-            left:50%; margin-left:-25px; top:50%; margin-top:-25px;
-            z-index:2; display:none;
+        .loading{
+            position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0);
+            z-index: 100; display:none;
+        }
+        .loading div{ 
+            width:50px; height:50px; position:absolute; text-align:center; line-height:50px;
+            left:50%; margin-left:-25px; top:50%; margin-top:-25px; color:#000;
         }
         header{
             width:100%; height:48px; line-height:48px; background:#f50; color:#fff; font-size:14px;
@@ -203,7 +206,7 @@
             <div>会员</div>
         </footer>
 
-        <div class="loading"></div>
+        <div class="loading"><div>loading...</div></div>
         
         <script type="text/javascript">
         scrollFix('.js_view');
@@ -214,21 +217,42 @@
             isClick = false;
 
         var $html = '<li>越到后面越觉得phonegap制</li>'+
-            '<li>越到后面越觉得phonegap制</li>'+
-            '<li>越到后面越觉得phonegap制</li>'+
-            '<li>越到后面越觉得phonegap制</li>'+
-            '<li>越到后面越觉得phonegap制</li>'+
-            '<li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
+            '<li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li><li>越到后面越觉得phonegap制</li>'+
             '<li>越到后面越觉得phonegap制</li>';
 
         var $start = '<li>phonegap不是银弹</li>'+
-            '<li>一些比如新闻展示，和硬件交互不高</li>'+
-            '<li>越到后面越觉得phonegap制</li>'+
-            '<li>phonegap不是银弹</li>'+
-            '<li>一些比如新闻展示，和硬件交互不高</li>'+
-            '<li>越到后面越觉得phonegap制</li>'+
-            '<li>phonegap不是银弹</li>'+
-            '<li>一些比如新闻展示，和硬件交互不高</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
+            '<li>一些比如新闻展示，和硬件交互不高</li><li>越到后面越觉得phonegap制</li><li>phonegap不是银弹</li>'+
             '<li>越到后面越觉得phonegap制</li>';
 
         var options = {
@@ -244,6 +268,7 @@
 
         $back.on('click', function(){
             $that.html("");
+            
             $loading.css('display', 'block');
 
             options.direction = 'right';
@@ -260,20 +285,34 @@
         });
 
         $that.on('click', function (){
-            $that.html("");
+            setTimeout(function(){
+                $that.html("");
+            }, 50);
             $loading.css('display', 'block');
 
             options.direction = 'left';
 
-            window.plugins.nativepagetransitions.slide(
-                options,
-                function (msg) {
-                    onComplete();
-                },
-                function (msg) {
-                    alert("error: " + msg)
-                }
-            );
+            // window.plugins.nativepagetransitions.slide(
+            //     options,
+            //     function (msg) {
+            //         onComplete();
+            //     },
+            //     function (msg) {
+            //         alert("error: " + msg)
+            //     }
+            // );
+
+            window.plugins.nativepagetransitions.slide({
+                "direction"        : "left",
+                "duration"         :  500,
+                "slowdownfactor"   :    3,
+                "iosdelay"         :  100,
+                "androiddelay"     :  150,
+                "winphonedelay"    :  250,
+                "fixedPixelsTop"   :    0,
+                "fixedPixelsBottom":   48,
+                "href" : "list.html"
+            });
 
         });
 
