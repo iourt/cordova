@@ -1,17 +1,17 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/uk.co.ilee.nativetransitions/www/nativetransitions.js",
-        "id": "uk.co.ilee.nativetransitions.NativeTransitions",
+        "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+        "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
         "clobbers": [
-            "nativetransitions"
+            "window.plugins.nativepagetransitions"
         ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "uk.co.ilee.nativetransitions": "0.1.4"
+    "com.telerik.plugins.nativepagetransitions": "0.2.14"
 }
 // BOTTOM OF METADATA
 });

@@ -622,7 +622,14 @@
 
     self.webView = [self newCordovaViewWithFrame:webViewBounds];
     self.webView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-
+    
+    
+    //--修改弹性滚动
+    for (id subview in self.webView.subviews){  //webView是要被禁止滚动和回弹的UIWebView
+        if ([[subview class] isSubclassOfClass: [UIScrollView class]])
+            ((UIScrollView *)subview).bounces = NO;
+    }
+    
     [self.view addSubview:self.webView];
     [self.view sendSubviewToBack:self.webView];
 }

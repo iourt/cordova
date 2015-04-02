@@ -9,7 +9,7 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"NativeTransitions\"><param name=\"ios-package\" value=\"NativeTransitions\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"NativePageTransitions\"><param name=\"ios-package\" value=\"NativePageTransitions\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -24,7 +24,7 @@
         }
     },
     "installed_plugins": {
-        "uk.co.ilee.nativetransitions": {
+        "com.telerik.plugins.nativepagetransitions": {
             "PACKAGE_NAME": "com.example.club"
         }
     },
