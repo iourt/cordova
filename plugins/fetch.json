@@ -1,0 +1,22 @@
+{
+    "uk.co.ilee.nativetransitions": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/leecrossley/cordova-plugin-native-transitions.git",
+            "subdir": "."
+        }
+    },
+    "com.telerik.plugins.nativepagetransitions": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/iourt/NativePageTransitions.git",
+            "subdir": "."
+        }
+    },
+    "com.telerik.plugins.wkwebview": {
+        "source": {
+            "type": "registry",
+            "id": "com.telerik.plugins.wkwebview"
+        }
+    }
+}

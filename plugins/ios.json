@@ -4,8 +4,29 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"NativeTransitions\"><param name=\"ios-package\" value=\"NativeTransitions\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "framework": {
+                "parents": {
+                    "WebKit.framework": [],
+                    "libz.dylib": []
+                }
+            }
+        }
     },
-    "installed_plugins": {},
+    "installed_plugins": {
+        "uk.co.ilee.nativetransitions": {
+            "PACKAGE_NAME": "com.example.club"
+        }
+    },
     "dependent_plugins": {}
 }

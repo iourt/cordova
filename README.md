@@ -12,3 +12,7 @@ cordova compile ios
 
 
 cordova plugin add https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git
+
+安装WKWebView
+cordova plugin add com.telerik.plugins.wkwebview
+cordova prepare

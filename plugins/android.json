@@ -4,8 +4,18 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": []
+                }
+            }
+        }
     },
-    "installed_plugins": {},
+    "installed_plugins": {
+        "uk.co.ilee.nativetransitions": {
+            "PACKAGE_NAME": "com.example.club"
+        }
+    },
     "dependent_plugins": {}
 }
