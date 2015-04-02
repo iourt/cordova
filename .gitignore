@@ -1,8 +1,8 @@
 Thumbs.db
 .DS_Store
 
-#platforms/ios/Club.xcodeproj/project.xcworkspace/
-#platforms/ios/Club.xcodeproj/xcuserdata/
-#platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/
+platforms/ios/Club.xcodeproj/project.xcworkspace/
+platforms/ios/Club.xcodeproj/xcuserdata/
+platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/
 
 platforms/ios/www/
