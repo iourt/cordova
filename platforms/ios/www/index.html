@@ -42,6 +42,11 @@
         .event{
             line-height: 30px;
         }
+        .loading{ 
+            width:50px; height:50px; background:red; position:absolute;
+            left:50%; margin-left:-25px; top:50%; margin-top:-25px;
+            z-index:2; display:none;
+        }
         </style>
         <ul class="event">
             <li>phonegap不是银弹</li>
@@ -54,6 +59,8 @@
             <li>一些比如新闻展示，和硬件交互不高</li>
             <li>越到后面越觉得phonegap制</li>
         </ul>
+
+        <div class="loading"></div>
         
         <script type="text/javascript">
         var $that = $('.event'),
@@ -103,8 +110,9 @@
 
 
 
-        var duration = 0.5,
-            direction = "left"; 
+        var duration = 1,
+            direction = "down",
+            $loading = $('.loading'); 
 
         $that.on('click', function (){
             // setTimeout(function() {
@@ -115,14 +123,15 @@
             //     }
             //     isClick = !isClick;
             // }, 50);
+            $loading.css('display', 'block');
 
             nativetransitions.flip(duration, direction, onComplete);
 
-            nativetransitions.curl(duration, direction, onComplete);
+            // nativetransitions.curl(duration, direction, onComplete);
 
-            nativetransitions.fade(duration, onComplete);
+            // nativetransitions.fade(duration, onComplete);
 
-            nativetransitions.flip(duration, direction);
+            // nativetransitions.flip(duration, direction);
 
         });
 
@@ -134,6 +143,7 @@
                     $that.html($html);
                 }
                 isClick = !isClick;
+                $loading.css('display', 'none');
             }, 50);
         }
         </script>
